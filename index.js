@@ -5,7 +5,6 @@ function financial(x) {
     if (nbr[nbr.length -1] < 5 && nbr[nbr.length -2]< 5){
         nbr[nbr.length -2] = "0";
         nbr =  nbr.join('');
-        console.log(nbr);
     }
     else{
         if ((nbr[nbr.length -1]  >=5 && nbr[nbr.length -2]>= 5) ||
@@ -20,8 +19,6 @@ function financial(x) {
                 nbr[nbr.length -1] = '0';
                 nbr =  nbr.join('');
             }
-            
-        console.log(nbr);
         }
         else{
             if ((nbr[nbr.length -1]  >=5 && nbr[nbr.length -2] < 5)){
