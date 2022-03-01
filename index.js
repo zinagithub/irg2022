@@ -4,30 +4,32 @@ function financial(x) {
     nbr = nbr.split("");
     if (nbr[nbr.length -1] < 5 && nbr[nbr.length -2]< 5){
         nbr[nbr.length -2] = "0";
-        nbr =  nbr.join('');
+        //nbr =  nbr.join('');
     }
     else{
         if ((nbr[nbr.length -1]  >=5 && nbr[nbr.length -2]>= 5) ||
             (nbr[nbr.length -2]  >=5 && nbr[nbr.length -3]>= 5)){
             nbr[nbr.length -3] = (Number.parseInt(nbr[nbr.length -3]) +1).toString();
             if (nbr[nbr.length -3]== "10"){
-                 nbr = Math.trunc(x) + 1;
+                 return(nbr = Math.trunc(x) + 1);
                 
             }
             else{
                 nbr[nbr.length -2] = '0';
                 nbr[nbr.length -1] = '0';
-                nbr =  nbr.join('');
+                //nbr =  nbr.join('');
             }
         }
         else{
             if ((nbr[nbr.length -1]  >=5 && nbr[nbr.length -2] < 5)){
                 nbr[nbr.length -1] = '0';
             nbr[nbr.length -2] = '0';
-            nbr =  nbr.join('');
+            //nbr =  nbr.join('');
             }
         }
+        
     }
+    nbr =  nbr.join('');
   return Number.parseFloat(nbr).toFixed(2);
   
   
